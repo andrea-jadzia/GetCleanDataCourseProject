@@ -74,7 +74,7 @@ x_all$id <- c(1:10299)
 
 ## Select only variables containing a mean or standard deviation.
 ## "MeanFreq"-variables and "Angle" variables are not included, as they do not contain a mean value 
-##    (even thougt the have the word "mean" in the name).
+##    (even though they have the word "mean" in the name).
 ## As parenthesis were replaced by "9" earlier, all mean values can be greped using "mean9",
 ##    which was "mean()" before replacement  
 x_all_short <- select(x_all, id, grep("mean9|std9",colnames(x_all)))
@@ -101,7 +101,7 @@ all(colSums(is.na(y_all_subs))==0)
 ## Merge all data
 all_data <- merge(x_all_short, y_all_subs, by ="id", all=TRUE)
 
-## Ceck for missings in all_data
+## Check for missings in all_data
 all(colSums(is.na(all_data))==0)
 
 ## Remove all unnessarary datasets
@@ -115,7 +115,3 @@ tidy_data <- dcast(data_melt, subject + activity ~ variable, mean)
 
 ## Remove intermediate dataset
 rm("data_melt")
-
-## Export the tidy data set
-write.table(tidy_data, file="./UCI HAR Dataset/tidydata.txt", dec=".", 
-            row.names = FALSE, col.names = TRUE)
