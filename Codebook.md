@@ -1,27 +1,28 @@
 Codebook for tidydata.txt
 ========================= 
 This dataset was produced as part of the Course Project for 'Getting and Cleaning Data' - Course on Coursera.
-It describes the variables, the data, and all transformations to clean up the data.
+It describes the variables, the data, and all transformations to clean up a given original dataset.
 
 ## Original Data
-The original dataset contains information about Human Activity Recognition Using Smartphones and was recorded by Jorge L. Reyes-Ortiz et.al. from Smartlab [Università degli Studi di Genova]. It can be retrieved at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. As part of the dataset there are two files that describe the original data in more detail: 'readme.txt' and 'feature_info.txt'.
+The original dataset contains information about Human Activity Recognition Using Smartphones and was recorded by Jorge L. Reyes-Ortiz et.al. from Smartlab at the University of Genova. Under the name **Human Activity Recognition Using Smartphones Data Set** it can be retrieved at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. Part of the dataset are two files that describe the original data in more detail: 'readme.txt' and 'feature_info.txt'.
 
 The data provides information of 30 individuals performing 6 different activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, a 3-axial linear acceleration and 3-axial angular velocity was captured at a constant rate of 50Hz.
 
-Overall there are 10,299 entries (number of rows) which contain different measurements of the 30 individuals performing the six different activities over time. For each person and activity combination there are between 36 and 95 entries (rows) with a mean of 57 entries per person and activity.
+Overall there are 10,299 entries (number of rows) which contain several measurements of the 30 individuals performing the six different activities over time. For each person and activity combination there are between 36 and 95 entries (rows) per person and activity.
 
-The original data consists of 561 measurement-variables (features) describing different summarized information like for example mean value, standard deviation, minimum and sum in a given time period. Of this only mean and standard deviation variables were taken for the tidy dataset. There are no missing values in the original data. All measurements are normalized. The values are numeric values, between -1 and 1.
+The original dataset consits of the raw sensor signals as time series as well as already aggregated measurements. There are 561 measurement-variables (features) describing different summarized information like for example mean value, standard deviation, minimum and sum in a given time window. Of this only mean and standard deviation variables were taken for the tidy dataset. There are no missing values in the original data. All measurements are normalized. The values are numeric values, between -1 and 1.
 
 ## Tidy data
-The tidy data was build by calculating the mean value of all variables that contain a mean or standard deviation for each person (subject) and activity. It consists of 180 rows, representing all 30 individuals performing each of the 6 activities.
+The tidy data was build by calculating the mean value of all variables that contain a mean or standard deviation for each person (subject) and activity. It consists of 180 rows, representing all 30 individuals (subjects) performing each of the 6 activities.
 
 ### Variables
 
-Besides the variables on subjects (persons) and activity, there are 66 newly calculated mean variables (33 based on mean values, 33 based on standard deviation of the original measurement).
-The kind of original measurement can be read from the variable names:
+Besides the variables on subject and activity, there are 66 newly calculated mean variables (33 based on mean values, 33 based on standard deviation of the original measurement).
 
-The names code consists of 5 different parts in the following order
+The specific kind of original measurement is coded into the variable names, which consist of 5 different parts in the following order:
 
+  | Coding      | Description
+--|-------------|---------
 1.|  t          | Time domain signals 
   |  f          | Frequency domain signals
 2.|  Body       | Body acceleration signals 
