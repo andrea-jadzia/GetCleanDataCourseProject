@@ -10,8 +10,9 @@
 ## 5. From the data set in step 4, creates a second, independent tidy data set 
 ##    with the average of each variable for each activity and each subject.
 
-## The dataset needs to be extracted in the working directory. After extraction it 
-## should be in a subfolder called "UCI HAR Dataset".
+## The dataset needs to be extracted in the working directory. After extraction 
+## the files on the top level should be directly in a subfolder called 
+## "UCI HAR Dataset" in the working directory.
 
 ## Load requires R packages for this script
 library(dplyr)

@@ -1,7 +1,7 @@
 Codebook for tidydata.txt
 ========================= 
 This dataset was produced as part of the Course Project for 'Getting and Cleaning Data' - Course on Coursera.
-It describes the variables, the data, and all transformations to clean up a given original dataset.
+It describes the variables, the data and all transformations to clean up the given original dataset.
 
 ## Original Data
 The original dataset contains information about **Human Activity Recognition Using Smartphones** and was recorded by Jorge L. Reyes-Ortiz et.al. from Smartlab at the University of Genova. It can be retrieved at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. Part of the dataset download are two files that describe the original data in more detail: 'readme.txt' and 'feature_info.txt'.
